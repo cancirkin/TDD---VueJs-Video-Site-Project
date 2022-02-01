@@ -1,0 +1,81 @@
+{
+  "consumer": {
+    "name": "Frontend"
+  },
+  "provider": {
+    "name": "Backend"
+  },
+  "interactions": [
+    {
+      "description": "a request not empty for video list",
+      "providerState": "get video list successfully",
+      "request": {
+        "method": "GET",
+        "path": "/videos"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "body": [
+          {
+            "id": 5,
+            "videoAddress": "https://www.youtube.com/watch?v=ZqgiuPt5QZo",
+            "coverImage": "https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/5-cover.webp",
+            "hoverImage": "https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/5-hover.webp",
+            "title": "Vue 3 For Beginners - Full Tutorial Course",
+            "viewCount": 186,
+            "publishDateInMonth": 12,
+            "ownerImage": "https://yt3.ggpht.com/Ph90sv8O_ZfnWjeoRFKiP-JfwPfdBd_PhK23cwqLY3-7aLB-JYoKFg2z2qqkysOk2LIHTdoFdQ=s68-c-k-c0x00ffffff-no-rj",
+            "ownerName": "The Earth Is Square",
+            "description": "Welcome to our Learn Vue 3 Tutorial Course for Beginners! Vue is a progressive framework for building user interfaces. Ready to start your path to becoming a front end Vue developer? Let's get started!"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "min": 1
+          },
+          "$.body[*].*": {
+            "match": "type"
+          },
+          "$.body[*].id": {
+            "match": "type"
+          },
+          "$.body[*].videoAddress": {
+            "match": "type"
+          },
+          "$.body[*].coverImage": {
+            "match": "type"
+          },
+          "$.body[*].hoverImage": {
+            "match": "type"
+          },
+          "$.body[*].title": {
+            "match": "type"
+          },
+          "$.body[*].viewCount": {
+            "match": "type"
+          },
+          "$.body[*].publishDateInMonth": {
+            "match": "type"
+          },
+          "$.body[*].ownerImage": {
+            "match": "type"
+          },
+          "$.body[*].ownerName": {
+            "match": "type"
+          },
+          "$.body[*].description": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
